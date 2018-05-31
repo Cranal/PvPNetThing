@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="PvPNetThing.BattleControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PvPNetThing">
+    <Grid Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="210"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="210"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Player block -->
+        <Label Grid.Row="0" Grid.Column="0" Content="{Binding Path=PlayerName}"/>
+        
+        <Canvas Grid.Row="0" Grid.Column="1">
+            <Rectangle Height="25" Width="204" Stroke="Black" StrokeThickness="2"/>
+            <Rectangle Height="21" Width="{Binding Path=CurrentHp}" Fill="Red" VerticalAlignment="Center" Margin="2" />     
+        </Canvas>
+        
+        <Label Grid.Row="1" Grid.Column="1" Content="Block"/>
+        
+        <local:TargetSelectionContro Grid.Row="2" Grid.Column="1" DataContext="{Binding Path=BlockTarget}" HorizontalAlignment="Center"/>
+            
+        
+        <!-- Enemy block -->
+        <Canvas Grid.Row="0" Grid.Column="3">
+            <Rectangle Height="25" Width="204" Stroke="Black" StrokeThickness="2" />
+            <Rectangle Height="21" Width="{Binding Path=EnemyCurrentHp}" Fill="Red" VerticalAlignment="Center" Margin="2" />
+        </Canvas> 
+        
+        <Label Grid.Row="0" Grid.Column="4" Content="{Binding Path=EnemyName}"/>
+        
+        <Label Grid.Row="1" Grid.Column="3" Content="Attack"/>
+        
+        <local:TargetSelectionContro Grid.Row="2" Grid.Column="3" DataContext="{Binding Path=AttackTarget}" HorizontalAlignment="Center"/>
+        
+        <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Content="Attack" Height="25" Command="{Binding Path=AttackCommand}"/>
+        
+        <ListView Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="5" ItemsSource="{Binding Path=BattleLog, NotifyOnSourceUpdated=True}"/>
+        
+    </Grid>
+</UserControl>

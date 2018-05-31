@@ -1,0 +1,19 @@
+﻿<Window x:Class="PvPNetThing.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PvPNetThing"
+        mc:Ignorable="d"
+        Title="PvPThing" Height="350" Width="700"
+        Closing="MainWindow_OnClosing">
+    <Grid>
+        <local:LoginControl HorizontalAlignment="Center" VerticalAlignment="Center" 
+                            Visibility="{Binding Path=IsLogingVisible}"
+                            DataContext="{Binding Path=LoginModel}"/>
+        <local:LogginingControl Visibility="{Binding Path=IsLoginProcessVisible}"/>
+        <local:LobbyControl Visibility="{Binding Path=IsVisible}" DataContext="{Binding Path=LobbyViewModel}"/>
+       <local:BattleControl Visibility="{Binding Path=IsBattleVisible, FallbackValue=Collapsed}" DataContext="{Binding Path=BattleViewModel}"/>
+        <local:EndBattleScreen Visibility="{Binding Path=IsBattleEndVisible, FallbackValue=Collapsed}" DataContext="{Binding Path=BattleEndViewModel}"/>
+    </Grid>
+</Window>

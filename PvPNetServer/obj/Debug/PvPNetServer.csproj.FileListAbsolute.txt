@@ -1,0 +1,8 @@
+D:\Documents\Programms\PvPNetThing\PvPNetServer\obj\Debug\PvPNetServer.csprojResolveAssemblyReference.cache
+D:\Documents\Programms\PvPNetThing\PvPNetServer\bin\Debug\PvPNetServer.exe
+D:\Documents\Programms\PvPNetThing\PvPNetServer\bin\Debug\PvPNetServer.pdb
+D:\Documents\Programms\PvPNetThing\PvPNetServer\obj\Debug\PvPNetServer.exe
+D:\Documents\Programms\PvPNetThing\PvPNetServer\obj\Debug\PvPNetServer.pdb
+D:\Documents\Programms\PvPNetThing\PvPNetServer\bin\Debug\PvPNet.dll
+D:\Documents\Programms\PvPNetThing\PvPNetServer\bin\Debug\PvPNet.pdb
+D:\Documents\Programms\PvPNetThing\PvPNetServer\bin\Debug\PvPNetServer.xml

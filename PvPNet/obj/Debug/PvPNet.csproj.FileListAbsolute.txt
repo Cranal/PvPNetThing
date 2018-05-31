@@ -1,0 +1,5 @@
+D:\Documents\Programms\PvPNetThing\PvPNet\bin\Debug\PvPNet.dll
+D:\Documents\Programms\PvPNetThing\PvPNet\bin\Debug\PvPNet.pdb
+D:\Documents\Programms\PvPNetThing\PvPNet\obj\Debug\PvPNet.csprojResolveAssemblyReference.cache
+D:\Documents\Programms\PvPNetThing\PvPNet\obj\Debug\PvPNet.dll
+D:\Documents\Programms\PvPNetThing\PvPNet\obj\Debug\PvPNet.pdb
